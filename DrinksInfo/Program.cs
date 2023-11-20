@@ -1,0 +1,2 @@
+﻿
+CategoryMenu test = new();
