@@ -1,9 +1,13 @@
+using DrinkInfo;
+
 namespace DrinksInfo;
 
-public class SpecificClassMenu
+public class SpecificCategoryMenu
 {
-    public SpecificClassMenu()
+    public SpecificCategoryMenu(CategoryRetriever retriever)
     {
-
+        CategoryRetriever = retriever;
     }
+
+    private CategoryRetriever CategoryRetriever {get; init;}
 }

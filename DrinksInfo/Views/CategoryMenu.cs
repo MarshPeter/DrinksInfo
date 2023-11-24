@@ -3,9 +3,9 @@ using DrinksInfo;
 
 public class CategoryMenu : MenuFundamental
 {
-    public CategoryMenu()
+    public CategoryMenu(CategoryRetriever categoryRetriever)
     {
-        DrinkCategoriesGetter = new();
+        DrinkCategoriesGetter = categoryRetriever;
     }
 
     public int CategoryMenuDisplay()

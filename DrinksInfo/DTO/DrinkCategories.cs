@@ -1,7 +1,6 @@
 namespace DrinksInfo;
 
 using System.Text.Json.Serialization;
-
 public class DrinkCategories
 {
     [JsonPropertyName("drinks")]

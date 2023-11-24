@@ -1,7 +1,7 @@
-﻿// CategoryMenu test = new();
-using DrinkInfo;
+﻿using DrinksInfo;
 
-CategoryMenu initialMenu = new();
+MenuController menu = new();
 
-initialMenu.CategoryMenuDisplay();
+menu.OpperateProgram();
+
 
