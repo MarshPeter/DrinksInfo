@@ -15,7 +15,7 @@ public class MenuController
     public void OpperateProgram()
     {
         int selection = SelectCategoryMenu.CategoryMenuDisplay();
-        
+        SelectDrinkMenu.GetCategoryInfo(selection);
     }
 
 

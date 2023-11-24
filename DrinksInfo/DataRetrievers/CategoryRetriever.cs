@@ -12,7 +12,7 @@ public class CategoryRetriever
         try
         {
             CategoryGetUri = ConfigurationManager.AppSettings.Get("CategoryChoicesUri")!;
-            BaseCategoryUri = ConfigurationManager.AppSettings.Get("BaseApiUri")!;
+            BaseCategoryUri = ConfigurationManager.AppSettings.Get("BaseFilterApiUri")!;
         }
         catch (Exception e)
         {
@@ -34,9 +34,10 @@ public class CategoryRetriever
         return DrinkCategoriesContainer;       
     }
 
-    public DrinksForCategory GetSpecificCategory(String category)
+    public DrinksForCategory GetSpecificCategory(string category)
     {
-        string json = Utils.GetCategoryJson(CategoryGetUri);
+        string uri = BaseCategoryUri + category;
+        string json = Utils.GetCategoryJson(uri);
         if (json == "")
         {
             EmptyJsonResult($"There was an error with retrieving JSON for the category '{category}'");

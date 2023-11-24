@@ -10,6 +10,13 @@ public abstract class MenuFundamental
         Console.ReadKey();
     }
 
+    public void IrresolvableError(string error)
+    {
+        Console.WriteLine("There was a breaking error: ");
+        Console.WriteLine(error);
+        Environment.Exit(1);
+    }
+
     public string GetUserResponse(string prompt)
     {
         while (true)

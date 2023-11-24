@@ -23,7 +23,7 @@ public class CategoryMenu : MenuFundamental
 
             if (parsedResponse > 0 && parsedResponse <= categoryCount)
             {
-                return parsedResponse;
+                return parsedResponse - 1;
             }
             if (parsedResponse == -1)
             {
@@ -40,7 +40,6 @@ public class CategoryMenu : MenuFundamental
         DrinkCategories drinkCategories = DrinkCategoriesGetter.GetCatagories();
 
         Tables.DisplayCategoriesTable(drinkCategories);
-        // Console.WriteLine(Uri.EscapeDataString("Other / Unknown"));
     }
 
     private CategoryRetriever DrinkCategoriesGetter {get; init;}
