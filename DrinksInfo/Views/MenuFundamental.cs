@@ -1,3 +1,5 @@
+using System.Runtime.CompilerServices;
+
 public abstract class MenuFundamental
 {
     public void PrintError(string error)
@@ -16,7 +18,7 @@ public abstract class MenuFundamental
             Console.WriteLine(prompt);
             string? response = Console.ReadLine(); 
 
-            if (response == null)
+            if (response == null || response == "")
             {
                 this.InvalidInput();
                 continue;
