@@ -7,8 +7,8 @@ public class CategoryRetriever
 {
     public CategoryRetriever()
     {
-        DrinkCategories DrinkCategoriesContainer = new();
-        DrinksForCategory DrinksForLastCategory = new();
+        DrinkCategories DrinkCategoriesContainer = new(){};
+        DrinksForCategory DrinksForLastCategory = new(){};
         try
         {
             CategoryGetUri = ConfigurationManager.AppSettings.Get("CategoryChoicesUri")!;

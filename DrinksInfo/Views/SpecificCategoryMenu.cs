@@ -21,12 +21,14 @@ public class SpecificCategoryMenu : MenuFundamental
 
         string apiEnding = "c=" + Uri.EscapeDataString(chosenCategory);
 
+        DisplayTables(apiEnding);
+    }
+
+    public void DisplayTables(string apiEnding)
+    {
         DrinksForCategory drinks = CategoryRetriever.GetSpecificCategory(apiEnding);
 
-        foreach (Drink categoryDrink in drinks.Drinks!)
-        {
-            Console.WriteLine(categoryDrink.DrinkName);
-        }
+        Tables.DisplayDrinksForCategory(drinks);
     }
 
     private CategoryRetriever CategoryRetriever {get; init;}
