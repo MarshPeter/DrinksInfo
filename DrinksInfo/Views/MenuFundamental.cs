@@ -21,8 +21,8 @@ public abstract class MenuFundamental
     {
         while (true)
         {
-            Console.WriteLine("write here >");
             Console.WriteLine(prompt);
+            Console.Write("write here >");
             string? response = Console.ReadLine(); 
 
             if (response == null || response == "")

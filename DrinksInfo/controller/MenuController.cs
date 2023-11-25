@@ -1,4 +1,5 @@
 
+using System.Threading.Channels;
 using DrinkInfo;
 
 namespace DrinksInfo;
@@ -15,10 +16,9 @@ public class MenuController
     public void OpperateProgram()
     {
         int selection = SelectCategoryMenu.CategoryMenuDisplay();
-        SelectDrinkMenu.GetCategoryInfo(selection);
+        int chosenDrinkIndex = SelectDrinkMenu.GetCategoryInfo(selection);
+        Console.WriteLine($"Chosen index was: {chosenDrinkIndex}");
     }
-
-
     private CategoryMenu SelectCategoryMenu {get; set;}
     private SpecificCategoryMenu SelectDrinkMenu {get; set;}
 }
